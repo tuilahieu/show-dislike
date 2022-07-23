@@ -9,6 +9,10 @@ const defaultTheme = document.querySelector('.default');
 searchBtn.addEventListener('click', function() {
     loading.style.display = 'flex';
     iframe.textContent = '';
+    if(searchUrl.value.includes('https://youtu.be/')) {
+        searchUrl.value = searchUrl.value.replace('https://youtu.be/', 'https://www.youtube.com/watch?v=');
+    }
+
     let slicedUrl = searchUrl.value.indexOf('watch?v=');
     if(slicedUrl === -1) {
         error.style.display = 'flex';
@@ -28,7 +32,6 @@ searchBtn.addEventListener('click', function() {
         iframe.style.display = 'block';
         resultData.textContent = 'Dữ liệu trả về: ';
         let idVideo = searchUrl.value.slice(slicedUrl + 'watch?v='.length);
-        let viewHeight = document.querySelector('.grid').clientHeight;
         let iframeShow = `
         <iframe src="https://www.youtube.com/embed/${idVideo}" frameborder="0" controls allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         iframe.insertAdjacentHTML('beforeend', iframeShow);
