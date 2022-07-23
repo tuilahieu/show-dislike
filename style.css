@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iframe {
+    height: calc(100vw / 1.8);
+    max-height: 540px;
+    display: none;
+}
+
+.loading {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .svg-container {
+    width: 20%;
+    height: 100%;
+  }
+  
+  .hex {
+    position: relative;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: var(--anim-delay);
+    transform-origin: 50% 50%;
+    animation-name: growIn;
+  }
+  
+  [data-index="1"] {
+    --anim-delay: 300ms;
+  }
+  
+  [data-index="2"] {
+    --anim-delay: 400ms;
+  }
+  
+  [data-index="3"] {
+    --anim-delay: 500ms;
+  }
+  
+  [data-index="4"] {
+    --anim-delay: 600ms;
+  }
+  
+  [data-index="5"] {
+    --anim-delay: 700ms;
+  }
+  
+  [data-index="6"] {
+    --anim-delay: 800ms;
+  }
+  
+  [data-index="7"] {
+    --anim-delay: 900ms;
+  }
+  
+  @keyframes growIn {
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0.1, 0.1);
+    }
+    20%,
+    70% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  .wrapper {
+    padding: 12px 24px;
+  }
+
+  .input-control {
+    display: flex;
+  }
+
+  #url-video {
+    width: 80%;
+    padding: 12px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 1px 1px #ccc;
+    /* border: none; */
+    font-size: 18px;
+  }
+
+  #search-video {
+    width: 20%;
+    padding: 12px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: 1px solid #ccc;
+    border: none;
+    box-shadow: 0 0 1px 1px #ccc;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    display: none;
+  }
+
+  .default {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  .default p {
+    margin: 12px 0;
+  }
+
+  .result-data {
+    margin-top: 32px;
+    font-size: 16px;
+  }
+  .result {
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+
+  .result-data div {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  
